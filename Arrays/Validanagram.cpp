@@ -1,5 +1,7 @@
 //leet code problem problem 242 valid anagram
 //the problem is to check whether two strings are anagram of each other or not
+//my approach is to use list data structure to store the characters of both strings
+//then sort both lists and compare them that is not a very optimal solution but works fine for small strings
 class Solution {
 public:
     bool isAnagram(string s, string t) {
