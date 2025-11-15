@@ -1,32 +1,26 @@
 //leet code problem problem 242 valid anagram
 //the problem is to check whether two strings are anagram of each other or not
-//my approach is to use list data structure to store the characters of both strings
-//then sort both lists and compare them that is not a very optimal solution but works fine for small strings
+//i am updating the code using the new approach this is very optimised approach
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        if(s.size()!=t.size())
-        {
+        if(s.length()!=t.length()){
             return false;
         }
-        list <char> s1,t1;
-        for(char a:s)
-        {
-            s1.push_back(a);
+        int arr[26]={0};
+
+        for(int i=0;i<s.length();i++){
+            arr[s[i]-'a']++;
+            arr[t[i]-'a']--;
         }
-        for(char b:t)
-        {
-            t1.push_back(b);
+
+        for(int i=0;i<26;i++){
+            if(arr[i]!=0){
+                return false;
+            }
         }
-        s1.sort();
-        t1.sort();
-        if(s1==t1)
-        {
-            return true;
-        }
-        else
-        {
-            return false;
-        }
+        
+        return true;
     }
+    
 };
