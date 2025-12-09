@@ -13,7 +13,7 @@ public:
         }
         for(int j=i;j>=0;j--){
             if(s[j]!=' '){
-                count++;
+                count++;//increment count for each character in the last word
             }
             else{
                 return count;
