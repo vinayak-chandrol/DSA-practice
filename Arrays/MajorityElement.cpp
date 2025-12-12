@@ -2,7 +2,7 @@
 //the approach is to count the occurrences of each element and return the one that occurs more than n/2 times
 //i used a nested loop to count occurrences i know this is not the most optimal solution but it works for small inputs but
 //has a time complexity of O(n^2) the space complexity is O(1) that is given in the problem constraints and so we dont need extra space
-#include <bits.stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 class Solution {
 public:
@@ -29,6 +29,7 @@ public:
 };
 int main(){
     Solution sol;
-    sol.majorityElement({6,5,5});
+    vector<int> nums = {6,5,5};
+    cout << sol.majorityElement(nums) << endl;
     return 0;
 }
